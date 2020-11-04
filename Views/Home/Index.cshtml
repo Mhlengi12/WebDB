@@ -1,0 +1,37 @@
+﻿@model List<WebDB.Controllers.HomeController.User>
+
+@{
+    ViewData["Title"] = "Home Page";
+    var users = ViewData["Users"] as List<WebDB.Controllers.HomeController.User>;
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.id</td>
+            <td>@user.name</td>
+        </tr>
+    }
+
+</table>
+
+
+@*@section Scripts{
+
+        <script>
+            alert("index error");
+        </script>
+
+    }*@
